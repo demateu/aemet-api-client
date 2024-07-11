@@ -31,4 +31,10 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    //AEMET
+    'aemet' => [
+        'base_uri' => env('AEMET_BASE_URI'),
+        'key' => env('AEMET_ACCESS_KEY'),
+    ],
+
 ];

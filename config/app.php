@@ -82,7 +82,8 @@ return [
     |
     */
 
-    'locale' => 'en',
+    //'locale' => 'en',
+    'locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------
@@ -108,7 +109,19 @@ return [
     |
     */
 
-    'faker_locale' => 'en_US',
+    //'faker_locale' => 'en_US',
+    'faker_locale' => 'es',
+
+    /*
+    |--------------------------------------------------------------------------
+    | codificación de la respuesta HTTP (demateu)
+    |--------------------------------------------------------------------------
+    |
+    | Configura tu aplicación web para que todas las respuestas HTML 
+    | se envíen con la codificación UTF-8
+    |
+    */
+    'charset' => 'UTF-8', // Añade esta línea
 
     /*
     |--------------------------------------------------------------------------
