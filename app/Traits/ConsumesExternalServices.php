@@ -17,12 +17,6 @@ trait ConsumesExternalServices
             'base_uri' => $this->baseUri,
         ]);
 
-        //resolver la autorizacion -> Método OPCIONAL
-        /*
-        if(method_exists($this, 'resolveAuthorization')){
-            $this->resolveAuthorization($queryParams, $formParams, $headers);
-        }
-        */
 
         $response = $client->request($method, $requestUrl, [
             'headers' => is_array($headers) ? $headers : [],

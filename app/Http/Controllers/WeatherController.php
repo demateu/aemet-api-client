@@ -72,16 +72,11 @@ class WeatherController extends Controller
                 ]);
             }
 
-
-            //return $cities_all;
-            //retornar la vista con los datos de las ciudades
+            
         } catch (RequestException $e) {
             return $e->getMessage();
         }
     }
-
-
-    //recibir datos del form por el request, validar datos...
 
 
     /**
@@ -130,43 +125,6 @@ class WeatherController extends Controller
                 $minima = $tiempo[0]->prediccion->dia[0]->temperatura->minima;
 
 
-                    // Convertir stdClass a array
-                    //$array = json_decode(json_encode($tiempo), true);
-
-                    // Convertir array a objeto de Laravel
-                    //$objetoLaravel = Collection::make($array);
-                    //dd($objetoLaravel[0]->nombre);
-
-                //dd($tiempo[0]->elaborado);
-                //$tiempo = new Collection($tiempo_municipio_array);
-
-                            //$data = json_decode($jsonResponse);
-                            /*
-                            // Verificar si $data es un objeto stdClass
-                            if (is_object($tiempo_municipioStdClass) && get_class($tiempo_municipioStdClass) === 'stdClass') {
-                                dd('stdclass');
-                            }
-                            
-                            // Verificar si $data es un array
-                            if (is_array($tiempo_municipioStdClass)) {
-                                dd('aray');
-                            }
-                            */
-                    // Convertir el array a objeto
-                    /*
-                    $tiempo = (object) $tiempo_municipioStdClass;
-                    if (is_object($tiempo) && get_class($tiempo) === 'stdClass') {
-                        dd('stdclass');
-                    }
-                    */
-
-                    // También puedes usar el método object de Collection
-                    //$coleccion = new Collection($array);
-                    //$objetoDesdeColeccion = $coleccion->object();
-
-                //$tiempo = new Weather();
-                //$tiempo->fill((array)$tiempo_municipioStdClass);
-
                 // Retornar la vista con los datos del tiempo del municipio
                 return view('tiempo', [
                     //'tiempo' => $tiempo,//objeto del Modelo
@@ -175,57 +133,6 @@ class WeatherController extends Controller
                     'maxima' => $maxima,
                     'minima' => $minima,
                 ]);
-
-                /*
-                  #attributes: array:1 [▼
-                    0 => array:7 [▼
-                    "origen" => array:6 [▶]
-                    "elaborado" => "2024-07-11T18:36:08"
-                    "nombre" => "Aguaviva"
-                    "provincia" => "Teruel"
-                    "prediccion" => array:1 [▶]
-                    "id" => -21532
-                    "version" => 1.0
-                ]
-                */
-
-                /*
-                "elaborado" => "2024-07-11T18:36:08"
-                "nombre" => "Aguaviva"
-                "provincia" => "Teruel"
-                "prediccion" => array:1 [▼
-                  "dia" => array:7 [▼
-                    0 => array:10 [▼
-                      "probPrecipitacion" => array:7 [▶]
-                      "cotaNieveProv" => array:7 [▶]
-                      "estadoCielo" => array:7 [▶]
-                      "viento" => array:7 [▶]
-                      "rachaMax" => array:7 [▶]
-                      "temperatura" => array:3 [▶]
-                      "sensTermica" => array:3 [▶]
-                      "humedadRelativa" => array:3 [▶]
-                      "uvMax" => 10
-                      "fecha" => "2024-07-11T00:00:00"
-                    ]
-                    1 => array:10 [▼
-                      "probPrecipitacion" => array:7 [▶]
-                      "cotaNieveProv" => array:7 [▶]
-                      "estadoCielo" => array:7 [▶]
-                      "viento" => array:7 [▶]
-                      "rachaMax" => array:7 [▶]
-                      "temperatura" => array:3 [▶]
-                      "sensTermica" => array:3 [▶]
-                      "humedadRelativa" => array:3 [▶]
-                      "uvMax" => 10
-                      "fecha" => "2024-07-12T00:00:00"
-                    ]
-                    2 => array:10 [▶]
-                    3 => array:10 [▶]
-                    4 => array:10 [▶]
-                    5 => array:9 [▶]
-                    6 => array:9 [▶]
-                  ]
-                */
 
             }
         

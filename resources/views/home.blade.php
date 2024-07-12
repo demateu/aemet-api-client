@@ -25,7 +25,7 @@
                 <select form="selector-municipios" class="col" name="municipio" id="municipio" required>
                     <option value="">Selecciona el Municipio</option>
                     @foreach ($municipios as $municipio)
-                        <option value="{{ $municipio->id_old }}">{{ $municipio->id_old }}</option>
+                        <option value="{{ $municipio->id_old }}">{{ $municipio->nombre }} (id_old: {{ $municipio->id_old }})</option>
                     @endforeach
                 </select>
             
@@ -36,6 +36,12 @@
         </div>
     </section>
 
+    {{-- para seguimiento durante el desarrollo --}}
+    @foreach ($municipios as $municipio)
+        {{ $municipio }}
+        <hr>
+    @endforeach
+    {{-- /para seguimiento durante el desarrollo --}}
 
 </div>
 

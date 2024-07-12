@@ -4,10 +4,10 @@
 
 <div>
 
-    {{ $fecha }}
+{{ $fecha }}
 {{ $municipio }}
 {{ $maxima }}
-    {{ $minima }}
+{{ $minima }}
 
 
 </div>

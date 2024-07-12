@@ -94,20 +94,6 @@ class WeatherService
     }
 
 
-
-    /*
-    public function confirmPayment($paymentIntentId)
-    {
-        return $this->makeRequest(
-            'POST',
-            "/v1/payment_intents/{$paymentIntentId}/confirm",
-            //['return_url' => 'http://127.0.0.1:8000/',],
-        );
-    }
-    */
-
-
-
     /**
      * Recibe el objeto de la respuesta y la devuelve decodificada
      * 
@@ -119,25 +105,7 @@ class WeatherService
         //return json_decode($response);
         return json_decode($response, true);
     }
-    /*dd(json_decode($response));
-            array:4 [
-        "descripcion" => "exito"
-        "estado" => 200
-        "datos" => "https://opendata.aemet.es/opendata/sh/ed0e8f7f"
-        "metadatos" => "https://opendata.aemet.es/opendata/sh/4c38eb58"]
-    */
-
-        /* dd(json_decode($response, true));
-        OBJETO PHP
-            {#318 ▼ // app/Services/WeatherService.php:87
-        +"descripcion": "exito"
-        +"estado": 200
-        +"datos": "https://opendata.aemet.es/opendata/sh/ed0e8f7f"
-        +"metadatos": "https://opendata.aemet.es/opendata/sh/4c38eb58"
-            }
-        */
-
-
+  
     
 
 }
